@@ -1,0 +1,6 @@
+﻿  Game.cpp
+C:\Users\uralk\source\repos\RoadCrossing\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+  Game.h
+C:\Users\uralk\source\repos\RoadCrossing\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+  Generating Code...
+  RoadCrossing.vcxproj -> C:\Users\uralk\source\repos\RoadCrossing\Debug\RoadCrossing.exe
