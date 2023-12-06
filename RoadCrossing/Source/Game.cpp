@@ -11,8 +11,8 @@ void CGame::updatePosAnimal()
 CGame::CGame()
 {
  
-    vehicles.push_back(CVehicle(0, 1));
-    vehicles.push_back(CVehicle(1, 2));
+    vehicles.push_back(new CVehicle(0, 1));
+    vehicles.push_back(new CVehicle(1, 2));
 
 }
 
@@ -23,8 +23,8 @@ void CGame::drawGame()
    
     for (const auto& vehicle : vehicles)
     {
-        GoToXY(vehicle.mX, vehicle.mY);
-        std::cout << vehicle.symbol;
+        GoToXY(vehicle->mX, vehicle->mY);
+        std::cout << vehicle->symbol;
     }
 
     
@@ -54,7 +54,7 @@ CPeople &CGame::getPeople()
 
 CVehicle* CGame::getVehicle()
 {
-	return nullptr;
+	return vehicles[0];
 }
 
 CAnimal* CGame::getAnimal()
@@ -90,10 +90,10 @@ void CGame::updatePosPeople(char)
 
 void CGame::updatePosVehicle()
 {
-    for (CVehicle& vehicle : vehicles)
+    for (CVehicle* vehicle : vehicles)
     {
       
-        vehicle.Move(1, 0);
+        vehicle->Move(1, 0);
 		
         //std::cout << vehicle.symbol;
     }

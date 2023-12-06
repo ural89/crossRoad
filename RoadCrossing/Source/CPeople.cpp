@@ -29,9 +29,10 @@ void CPeople::Down(int y)
 	
 }
 
-bool CPeople::isImpact(const CVehicle*)
+bool CPeople::isImpact(const CVehicle* vehicle)
 {
-	return false;
+	if (vehicle == nullptr) return false;
+	return (vehicle->mX == mX && vehicle->mY == mY);
 }
 
 bool CPeople::isImpact(const CAnimal*)

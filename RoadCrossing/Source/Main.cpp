@@ -40,6 +40,7 @@ void SubThread()
         if (cg.getPeople().isImpact(cg.getVehicle()) || cg.getPeople().isImpact(cg.getAnimal()))
         {
             std::cout << "impact!" << '\n';
+            Sleep(2000);
         }
        
     }

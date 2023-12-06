@@ -69,7 +69,7 @@ class CGame
 	CPeople* p;
 private:
 	CPeople people;
-	std::vector<CVehicle> vehicles;
+	std::vector<CVehicle*> vehicles;
 	std::vector<CAnimal> animals;
 public:
 	CGame();
