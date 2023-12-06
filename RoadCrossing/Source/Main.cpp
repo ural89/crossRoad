@@ -37,8 +37,11 @@ void SubThread()
         cg.updatePosVehicle();
         cg.updatePosAnimal();
         cg.drawGame();
-        if (cg.getPeople().isImpact(cg.getVehicle()) || cg.getPeople().isImpact(cg.getAnimal()))
+
+        if (cg.getPeople().isImpact(cg.getVehicles())) //|| cg.getPeople().isImpact(cg.getAnimals()))
         {
+
+    
             std::cout << "impact!" << '\n';
             Sleep(2000);
         }

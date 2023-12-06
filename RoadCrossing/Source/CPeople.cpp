@@ -1,7 +1,7 @@
 #include "Game.h"
 
 
-CPeople::CPeople(){
+CPeople::CPeople() {
 
 }
 void CPeople::Up(int y)
@@ -9,7 +9,7 @@ void CPeople::Up(int y)
 	mY -= y;
 	if (mY < 0)
 		mIsFinish = true;
-	
+
 }
 
 void CPeople::Left(int x)
@@ -26,16 +26,22 @@ void CPeople::Down(int y)
 {
 	mY += y;
 
-	
+
 }
 
-bool CPeople::isImpact(const CVehicle* vehicle)
+bool CPeople::isImpact(const std::vector<CVehicle*>& vehicles)
 {
-	if (vehicle == nullptr) return false;
-	return (vehicle->mX == mX && vehicle->mY == mY);
+
+	for (const auto vehicle : vehicles)
+	{
+		if (vehicle == nullptr) continue;
+		if (vehicle->mX == mX && vehicle->mY == mY)
+			return true;
+	}
+	return false;
 }
 
-bool CPeople::isImpact(const CAnimal*)
+bool CPeople::isImpact(const std::vector<CAnimal*>& animals)
 {
 	return false;
 }

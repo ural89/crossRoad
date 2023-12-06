@@ -54,8 +54,8 @@ public:
 	void Left(int);
 	void Right(int);
 	void Down(int);
-	bool isImpact(const CVehicle*);
-	bool isImpact(const CAnimal*);
+	bool isImpact(const std::vector<CVehicle*>&);
+	bool isImpact(const std::vector<CAnimal*>&);
 	bool isFinish();
 	bool isDead();
 	char symbol = 178;
@@ -70,14 +70,14 @@ class CGame
 private:
 	CPeople people;
 	std::vector<CVehicle*> vehicles;
-	std::vector<CAnimal> animals;
+	std::vector<CAnimal*> animals;
 public:
 	CGame();
 	void drawGame();
 	~CGame();
 	CPeople &getPeople();
-	CVehicle* getVehicle();
-	CAnimal* getAnimal();
+	std::vector<CVehicle*> getVehicles();
+	std::vector<CAnimal*> getAnimals();
 	void resetGame();
 	void exitGame(HANDLE);
 	void startGame();

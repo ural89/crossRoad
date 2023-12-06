@@ -12,7 +12,7 @@ CGame::CGame()
 {
  
     vehicles.push_back(new CVehicle(0, 1));
-    vehicles.push_back(new CVehicle(1, 2));
+    vehicles.push_back(new CVehicle(5, 1));
 
 }
 
@@ -31,7 +31,7 @@ void CGame::drawGame()
     for (const auto& animal : animals)
     {
       //  GoToXY(animal.mX, animal.mY);
-        std::cout << animal.symbol;
+        std::cout << animal->symbol;
     }
 
     
@@ -52,14 +52,14 @@ CPeople &CGame::getPeople()
 	return people;
 }
 
-CVehicle* CGame::getVehicle()
+std::vector<CVehicle*> CGame::getVehicles()
 {
-	return vehicles[0];
+	return vehicles;
 }
 
-CAnimal* CGame::getAnimal()
+std::vector<CAnimal*> CGame::getAnimals()
 {
-	return nullptr;
+	return animals;
 }
 
 void CGame::resetGame()

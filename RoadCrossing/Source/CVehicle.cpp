@@ -5,7 +5,7 @@ void CVehicle::Move(int x, int y)
 	//GoToXY(mX, mY);
 	mX += x;
 	mY += y;
-	if (mX > 100)
+	if (mX > 30)
 	{
 		mX = 0;
 	}
