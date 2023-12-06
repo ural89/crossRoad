@@ -28,10 +28,11 @@ class CCar : public CVehicle
 class CAnimal
 {
 public:
+	CAnimal(int mx, int my) : mX(mx), mY(my) {}
 	int mX, mY;
 	virtual void Move(int, int);
 	virtual void Tell();
-	char symbol;
+	char symbol = 219;
 };
 class CDinausor : public CAnimal
 {
@@ -48,7 +49,7 @@ class CPeople
 	bool mState;
 	bool mIsFinish = false;
 public:
-	int mX = 10, mY = 10;
+	int mX = 10, mY = 6;
 	CPeople();
 	void Up(int);
 	void Left(int);
@@ -58,7 +59,7 @@ public:
 	bool isImpact(const std::vector<CAnimal*>&);
 	bool isFinish();
 	bool isDead();
-	char symbol = 178;
+	char symbol = 165;
 };
 
 class CGame

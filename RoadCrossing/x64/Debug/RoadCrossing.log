@@ -1,4 +1,27 @@
-﻿  CPeople.cpp
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(61,16): warning C4309: 'initializing': truncation of constant value
-  RoadCrossing.vcxproj -> C:\Users\Ural Kemal\Documents\GitHub\crossRoad\x64\Debug\RoadCrossing.exe
+﻿  CAnimal.cpp
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  CPeople.cpp
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  CVehicle.cpp
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  Game.cpp
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  Game.h
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  Main.cpp
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(35,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\uralk\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+  Generating Code...
+x64\Debug\Game.obj : warning LNK4042: object specified more than once; extras ignored
+  RoadCrossing.vcxproj -> C:\Users\uralk\Documents\GitHub\crossRoad\x64\Debug\RoadCrossing.exe

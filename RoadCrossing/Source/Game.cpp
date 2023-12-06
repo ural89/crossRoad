@@ -3,16 +3,14 @@
 void FixConsoleWindow();
 void GoToXY(int x, int y);
 
-void CGame::updatePosAnimal()
-{
-}
-
 
 CGame::CGame()
 {
  
     vehicles.push_back(new CVehicle(0, 1));
     vehicles.push_back(new CVehicle(5, 1));
+    animals.push_back(new CAnimal(25, 3));
+    animals.push_back(new CAnimal(20, 3));
 
 }
 
@@ -30,7 +28,7 @@ void CGame::drawGame()
     
     for (const auto& animal : animals)
     {
-      //  GoToXY(animal.mX, animal.mY);
+        GoToXY(animal->mX, animal->mY);
         std::cout << animal->symbol;
     }
 
@@ -95,7 +93,19 @@ void CGame::updatePosVehicle()
       
         vehicle->Move(1, 0);
 		
-        //std::cout << vehicle.symbol;
+       
     }
 }
+
+void CGame::updatePosAnimal()
+{
+    for (CAnimal* animal : animals)
+    {
+
+        animal->Move(-1, 0);
+
+
+    }
+}
+
 

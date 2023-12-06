@@ -38,7 +38,7 @@ void SubThread()
         cg.updatePosAnimal();
         cg.drawGame();
 
-        if (cg.getPeople().isImpact(cg.getVehicles())) //|| cg.getPeople().isImpact(cg.getAnimals()))
+        if (cg.getPeople().isImpact(cg.getVehicles()) || cg.getPeople().isImpact(cg.getAnimals()))
         {
 
     

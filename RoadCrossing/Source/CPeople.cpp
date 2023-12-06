@@ -43,6 +43,12 @@ bool CPeople::isImpact(const std::vector<CVehicle*>& vehicles)
 
 bool CPeople::isImpact(const std::vector<CAnimal*>& animals)
 {
+	for (const auto animal : animals)
+	{
+		if (animal == nullptr) continue;
+		if (animal->mX == mX && animal->mY == mY)
+			return true;
+	}
 	return false;
 }
 
