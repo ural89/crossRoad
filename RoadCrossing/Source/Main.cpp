@@ -66,8 +66,8 @@ int main()
         {
 			if (temp == 27)
 		    {
-            cg.exitGame(t1.native_handle());
-            return 0;
+				cg.pauseGame(t1.native_handle());
+                return 0;
 		    }
             if (toupper(temp) == 'A')
             {

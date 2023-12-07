@@ -6,4 +6,5 @@ C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16)
 C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(68,12): warning C4309: '=': truncation of constant value
 C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(82,12): warning C4309: '=': truncation of constant value
 C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(106,16): warning C4309: 'initializing': truncation of constant value
+x64\Debug\Game.obj : warning LNK4042: object specified more than once; extras ignored
   RoadCrossing.vcxproj -> C:\Users\Ural Kemal\Documents\GitHub\crossRoad\x64\Debug\RoadCrossing.exe

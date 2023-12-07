@@ -100,16 +100,34 @@ void CGame::startGame()
 {
 }
 
-void CGame::pauseGame(HANDLE)
-{
+void CGame::pauseGame(HANDLE gameThreadHandle) {
+    // Implement logic to pause the game if needed
+    std::cout << "Game Paused" << std::endl;
+    SuspendThread(gameThreadHandle);
 }
 
 void CGame::resumeGame(HANDLE)
 {
 }
 
-void CGame::updatePosPeople(char)
+void CGame::updatePosPeople(char move)
 {
+    if (toupper(move) == 'A')
+    {
+        people.Left(1);
+    }
+    if (toupper(move) == 'D')
+    {
+        people.Right(1);
+    }
+    if (toupper(move) == 'W')
+    {
+        people.Up(1);
+    }
+    if (toupper(move) == 'S')
+    {
+        people.Down(1);
+    }
 }
 
 void CGame::updatePosVehicle()

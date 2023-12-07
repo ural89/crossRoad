@@ -93,7 +93,7 @@ class CPeople
 	bool mState;
 	bool mIsFinish = false;
 public:
-	int mX = 10, mY = 6;
+	int mX = 10, mY = 7;
 	CPeople();
 	void Up(int);
 	void Left(int);
