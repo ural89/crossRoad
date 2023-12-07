@@ -19,11 +19,20 @@ public:
 
 class CTruck :public CVehicle
 {
+public:
+	CTruck(int mx, int my) : CVehicle(mx, my)
+	{
+		symbol = 182;
+	}
 	
 };
 class CCar : public CVehicle
 {
-
+public:
+	CCar(int mx, int my) : CVehicle(mx, my)
+	{
+		symbol = 183;
+	}
 };
 class CAnimal
 {
@@ -36,12 +45,29 @@ public:
 };
 class CDinausor : public CAnimal
 {
+	CDinausor(int mx, int my) : CAnimal(mx, my)
+	{
+		symbol = 219;
+	};
+	
 
+	void Tell() override {
+		std::cout << "Tweet\n";
+	}
 
 };
 class CBird : public CAnimal
 {
+public:
+	CBird(int mx, int my) : CAnimal(mx, my)
+	{
+		symbol = 219;
+	};
+	
 
+	void Tell() override {
+		std::cout << "Tweet\n";
+	}
 };
 
 class CPeople

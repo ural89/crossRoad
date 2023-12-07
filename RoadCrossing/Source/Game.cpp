@@ -7,10 +7,12 @@ void GoToXY(int x, int y);
 CGame::CGame()
 {
  
-    vehicles.push_back(new CVehicle(0, 1));
-    vehicles.push_back(new CVehicle(5, 1));
-    animals.push_back(new CAnimal(25, 3));
-    animals.push_back(new CAnimal(20, 3));
+    vehicles.push_back(new CTruck(0, 1));
+    vehicles.push_back(new CTruck(5, 1));
+    vehicles.push_back(new CCar(5, 3));
+    vehicles.push_back(new CCar(10, 3));
+    animals.push_back(new CBird(25, 5));
+    animals.push_back(new CBird(20, 5));
 
 }
 
