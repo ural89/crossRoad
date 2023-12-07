@@ -8,11 +8,11 @@ CGame::CGame()
 {
  
     vehicles.push_back(new CTruck(0, 1));
-    vehicles.push_back(new CTruck(5, 1));
+    vehicles.push_back(new CTruck(10, 1));
     vehicles.push_back(new CCar(5, 3));
-    vehicles.push_back(new CCar(10, 3));
+    vehicles.push_back(new CCar(15, 3));
     animals.push_back(new CBird(25, 5));
-    animals.push_back(new CBird(20, 5));
+    //animals.push_back(new CBird(20, 5));
 
 }
 
@@ -23,21 +23,45 @@ void CGame::drawGame()
    
     for (const auto& vehicle : vehicles)
     {
-        GoToXY(vehicle->mX, vehicle->mY);
-        std::cout << vehicle->symbol;
+        if (CCar* car = dynamic_cast<CCar*>(vehicle))
+        {
+            GoToXY(vehicle->mX - 1, vehicle->mY);
+            std::cout << "[" << vehicle->symbol << "]";
+            GoToXY(vehicle->mX, vehicle->mY + 1);
+            std::cout << "0";
+            GoToXY(vehicle->mX - 1, vehicle->mY + 1);
+            std::cout << "0";
+        }
+        else if (CTruck* truck = dynamic_cast<CTruck*>(vehicle))
+        {
+            GoToXY(vehicle->mX - 1, vehicle->mY);
+            std::cout << "[" << vehicle->symbol << " " << vehicle->symbol << "]";
+            GoToXY(vehicle->mX, vehicle->mY + 1);
+            std::cout << "0" << "0" << "0";
+          
+        }
+    
+
     }
 
     
     for (const auto& animal : animals)
     {
-        GoToXY(animal->mX, animal->mY);
-        std::cout << animal->symbol;
+        if (CBird* bird = dynamic_cast<CBird*>(animal))
+        {
+            GoToXY(animal->mX, animal->mY - 1);
+            std::cout << "  \\";
+            GoToXY(animal->mX, animal->mY);
+            std::cout << ">('-')>";
+            GoToXY(animal->mX, animal->mY + 1);
+            std::cout << "  /";
+        }
     }
 
     
     GoToXY(people.mX, people.mY);
     std::cout << people.symbol;
-    Sleep(100);
+    Sleep(50);
 
     system("cls");
 

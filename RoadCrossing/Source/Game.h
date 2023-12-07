@@ -13,7 +13,7 @@ public:
 	CVehicle(int mx, int my) : mX(mx), mY(my) {}
 	int mX, mY;
 	virtual void Move(int, int) ;
-	char symbol = 182;
+	char symbol = 178;
 
 };
 
@@ -22,7 +22,16 @@ class CTruck :public CVehicle
 public:
 	CTruck(int mx, int my) : CVehicle(mx, my)
 	{
-		symbol = 182;
+		symbol = 178;
+	}
+	void Move(int x, int y) override
+	{
+		mX -= x;
+		mY += y;
+		if (mX < 0)
+		{
+			mX = 30;
+		}
 	}
 	
 };
@@ -31,7 +40,16 @@ class CCar : public CVehicle
 public:
 	CCar(int mx, int my) : CVehicle(mx, my)
 	{
-		symbol = 183;
+		symbol = 178;
+	}
+	void Move(int x, int y) override
+	{
+		mX += x;
+		mY += y;
+		if (mX > 30)
+		{
+			mX = 0;
+		}
 	}
 };
 class CAnimal
@@ -41,13 +59,13 @@ public:
 	int mX, mY;
 	virtual void Move(int, int);
 	virtual void Tell();
-	char symbol = 219;
+	char symbol = 178;
 };
 class CDinausor : public CAnimal
 {
 	CDinausor(int mx, int my) : CAnimal(mx, my)
 	{
-		symbol = 219;
+		symbol = 178;
 	};
 	
 
@@ -61,7 +79,7 @@ class CBird : public CAnimal
 public:
 	CBird(int mx, int my) : CAnimal(mx, my)
 	{
-		symbol = 219;
+		symbol = 178;
 	};
 	
 

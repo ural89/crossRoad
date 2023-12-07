@@ -1,18 +1,9 @@
 ﻿  Game.cpp
 C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
 C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(25,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(34,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(44,16): warning C4309: 'initializing': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(50,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(64,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(88,16): warning C4309: 'initializing': truncation of constant value
-  Game.h
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(16,16): warning C4309: 'initializing': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(25,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(34,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(44,16): warning C4309: 'initializing': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(50,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(64,12): warning C4309: '=': truncation of constant value
-C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(88,16): warning C4309: 'initializing': truncation of constant value
-  Generating Code...
+C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(43,12): warning C4309: '=': truncation of constant value
+C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(62,16): warning C4309: 'initializing': truncation of constant value
+C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(68,12): warning C4309: '=': truncation of constant value
+C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(82,12): warning C4309: '=': truncation of constant value
+C:\Users\Ural Kemal\Documents\GitHub\crossRoad\RoadCrossing\Source\Game.h(106,16): warning C4309: 'initializing': truncation of constant value
   RoadCrossing.vcxproj -> C:\Users\Ural Kemal\Documents\GitHub\crossRoad\x64\Debug\RoadCrossing.exe
