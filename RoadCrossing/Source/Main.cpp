@@ -19,16 +19,12 @@ void GoToXY(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void exitGame(std::thread* t)
-{
-    system("cls");
-    IsRunning = false;
-    t->join();
-}
+
 void SubThread()
 {
     while (IsRunning)
     {
+        //std::cout << "running" <<'\n';
         if (!cg.getPeople().isDead())
         {
             cg.updatePosPeople(Moving);
@@ -40,15 +36,19 @@ void SubThread()
 
         if (cg.getPeople().isImpact(cg.getVehicles()) || cg.getPeople().isImpact(cg.getAnimals()))
         {
-
-    
-            std::cout << "impact!" << '\n';
-            Sleep(2000);
+            //IsRunning = false;
+            
+          // std::cout<< "Impact!";
+           
+            //Sleep(1000);
         }
        
     }
 }
+void MainThread()
+{
 
+}
 
 int main()
 {
@@ -64,10 +64,20 @@ int main()
 
         if (!cg.getPeople().isDead())
         {
+           
 			if (temp == 27)
 		    {
-				cg.pauseGame(t1.native_handle());
-                return 0;
+                if (IsRunning)
+                {
+                    IsRunning = false;
+                    cg.pauseGame(t1.native_handle(), "Game Paused");
+                }
+                else
+                {
+                    IsRunning = true;
+                    cg.resumeGame(t1.native_handle());
+                }
+                //return 0;
 		    }
             if (toupper(temp) == 'A')
             {
@@ -86,6 +96,26 @@ int main()
                 cg.getPeople().Down(1);
             }
         }
+        else
+        {
+            if (IsRunning)
+            {
+                cg.pauseGame(t1.native_handle(), "Impact!");
+                IsRunning = false;
+            }
+      
+          //  cg.pauseGame(t1.native_handle(), "");
+            if (toupper(temp) == 'Y')
+            {   
+            
+                cg.resetGame();
+                cg.resumeGame(t1.native_handle());
+                IsRunning = true;
+               
+            }
+           
+        }
+     
     }
 }
 

@@ -88,6 +88,7 @@ std::vector<CAnimal*> CGame::getAnimals()
 
 void CGame::resetGame()
 {
+    people.resetPeople();
 }
 
 void CGame::exitGame(HANDLE handle)
@@ -100,14 +101,17 @@ void CGame::startGame()
 {
 }
 
-void CGame::pauseGame(HANDLE gameThreadHandle) {
+void CGame::pauseGame(HANDLE gameThreadHandle, std::string message) {
     // Implement logic to pause the game if needed
-    std::cout << "Game Paused" << std::endl;
+    std::cout << message << std::endl;
     SuspendThread(gameThreadHandle);
 }
 
-void CGame::resumeGame(HANDLE)
+void CGame::resumeGame(HANDLE gameThreadHandle)
 {
+    // Implement logic to resume the game if paused
+    std::cout << "Game Resumed" << std::endl;
+    ResumeThread(gameThreadHandle);
 }
 
 void CGame::updatePosPeople(char move)

@@ -92,6 +92,7 @@ class CPeople
 {
 	bool mState;
 	bool mIsFinish = false;
+	bool mIsDead = false;
 public:
 	int mX = 10, mY = 7;
 	CPeople();
@@ -103,6 +104,7 @@ public:
 	bool isImpact(const std::vector<CAnimal*>&);
 	bool isFinish();
 	bool isDead();
+	void resetPeople() { mX = 10; mY = 8; mIsDead = false; }
 	char symbol = 165;
 };
 
@@ -126,7 +128,7 @@ public:
 	void resetGame();
 	void exitGame(HANDLE);
 	void startGame();
-	void pauseGame(HANDLE);
+	void pauseGame(HANDLE, std::string message);
 	void resumeGame(HANDLE);
 	void updatePosPeople(char);
 	void updatePosVehicle();

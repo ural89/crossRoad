@@ -36,7 +36,10 @@ bool CPeople::isImpact(const std::vector<CVehicle*>& vehicles)
 	{
 		if (vehicle == nullptr) continue;
 		if (vehicle->mX == mX && vehicle->mY == mY)
+		{
+			mIsDead = true;
 			return true;
+		}
 	}
 	return false;
 }
@@ -47,7 +50,10 @@ bool CPeople::isImpact(const std::vector<CAnimal*>& animals)
 	{
 		if (animal == nullptr) continue;
 		if (animal->mX == mX && animal->mY == mY)
+		{
+			mIsDead = true;
 			return true;
+		}
 	}
 	return false;
 }
@@ -59,5 +65,5 @@ bool CPeople::isFinish()
 
 bool CPeople::isDead()
 {
-	return false;
+	return mIsDead;
 }
